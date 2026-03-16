@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "settings": {
+    "measure_time": false
+  },
+  "env": [
+    {
+      "name": "ZEST_SAMPLE",
+      "value": "ok",
+      "exported": true
+    }
+  ],
+  "sequence": [
+    {
+      "pipeline": [
+        { "cmd": "echo", "args": ["SHOULDNT SEE THIS"] },
+        { "cmd": "cat", "args": ["nonexistent.txt"] },
+        { "cmd": "upper" },
+        { "cmd": "history", "args" : ["5"] }
+      ],
+      "redirects": {
+        "stdin": "README.md",
+        "stdout": "out.txt",
+        "stderr": "err.txt",
+        "stdout_append": false,
+        "stderr_append": false,
+        "merge_stderr_to_stdout": false
+      },
+      "operator": "none"
+    }
+  ]
+}

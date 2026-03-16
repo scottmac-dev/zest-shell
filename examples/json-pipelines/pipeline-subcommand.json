@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "settings": {
+    "measure_time": false
+  },
+  "env": [],
+  "sequence": [
+    {
+      "pipeline": [
+        { "cmd": "echo", "args": ["testing substitute-cmd via JSON input"] },
+        {
+          "cmd": "echo",
+          "args": ["result:"],
+          "substitute-cmd": {
+            "cmd": "echo",
+            "args": ["hello world"]
+          }
+        },
+        {
+          "cmd": "upper"
+        }
+      ],
+      "operator": "none"
+    }
+  ]
+}

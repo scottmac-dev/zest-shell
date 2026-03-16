@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "settings": {
+    "measure_time": false
+  },
+  "env": [
+    {
+      "name": "ZEST_SAMPLE",
+      "value": "ok",
+      "exported": true
+    }
+  ],
+  "sequence": [
+    {
+      "pipeline": [
+        { "cmd": "echo", "args": ["hello from json"] }
+      ],
+      "operator": "none"
+    }
+  ]
+}
